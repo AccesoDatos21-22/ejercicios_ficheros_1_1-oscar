@@ -7,12 +7,13 @@ import java.nio.file.Paths;
 
 /**
  * 
- * @author Escribe_aqui_tu_nombre
+ * @author Oscar Gonzalez Strozzi
  * @date 
  * @version 
  * @license GPLv3
  *
  */
+
 public interface InterfazEjercicios {
 
 	/**
@@ -20,6 +21,7 @@ public interface InterfazEjercicios {
 	 * @param directorio
 	 * @return contenido de la ruta recibido
 	 */
+
 	public String[] listarDirectorio(String directorio);
 
 	/**
@@ -32,6 +34,7 @@ public interface InterfazEjercicios {
 	 */
 	public void crearFicherosIO();
 
+	
 	/**
 	 * realice la misma función que el método listarDirectorio pero utilizando las
 	 * clases Path y Files de java.nio.

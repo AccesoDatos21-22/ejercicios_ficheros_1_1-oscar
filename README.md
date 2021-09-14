@@ -34,7 +34,7 @@ public class Main {
 ```
 
 ### Ejercicios.java
-```
+```javascript
 package org.madrid.ad.ut01.ficheros;
 
 public class Main {

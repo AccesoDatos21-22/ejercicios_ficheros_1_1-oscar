@@ -5,7 +5,7 @@
 #### Hay que aclarar que el *ejercicio 3* no se ejecutara si el *ejercicio 2* ha sido completado con exito, ya que dara error en un directorio ya creado, por lo cual, no puede crearlo.
 
 ```javascript
-	//Abrir Windows Explorer para verificar que ha funcionado correctamente
+	
 package org.madrid.ad.ut01.ficheros;
 
 public class Main {

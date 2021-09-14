@@ -23,6 +23,7 @@ public class Ejercicios implements InterfazEjercicios {
 	@Override
 	public String[] listarDirectorio(String directorio) {
 		File file = new File(directorio);
+		if(file.list().length==0) return null;
 		return file.list();
 
 	}
@@ -33,13 +34,12 @@ public class Ejercicios implements InterfazEjercicios {
 		directorio.mkdir();
 		try {
 			File file1 =new File(directorio, "FICHERO1.txt");
-			File file1_1 =new File(directorio, "FICHERO1NUEVO.txt");
 			File file2 =new File(directorio, "FICHERO2.txt");
 			File file3 =new File(directorio, "FICHERO3.txt");
 			
 		file1.createNewFile();
 		file2.createNewFile();
-		file1.renameTo(file1_1);
+		file1.renameTo(new File(directorio, "FICHERO1NUEVO.txt"));
 		file2.delete();
 		file3.createNewFile();
 		
@@ -55,7 +55,7 @@ public class Ejercicios implements InterfazEjercicios {
 	@Override
 	public void crearFicherosNIO() {
 		Path pathCarpeta = Paths.get("NUEVODIR");
-		Path pathArchivo1 = Paths.get("NUEVODIR/FICHERO1.TXT");
+		Path pathArchivo1 = Paths.get("FICHERO1.TXT");
 		Path pathArchivo1_1 = Paths.get("NUEVODIR/FICHERO1NUEVO.TXT");
 		Path pathArchivo2 = Paths.get("NUEVODIR/FICHERO2.TXT");
 		Path pathArchivo3 = Paths.get("NUEVODIR/FICHERO3.TXT");

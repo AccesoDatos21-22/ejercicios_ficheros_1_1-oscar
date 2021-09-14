@@ -1,5 +1,8 @@
-# EjerciciosFicheros1.1 OSCAR GONZALEZ	
+# EjerciciosFicheros1.1 , de Oscar Gonzalez Strozzi
+### Incompleto
 ## Main.java
+#### En la clase <b>*MAIN*</b> se ejecutaran todos los ejercicios, usando sus respectivos métodos.
+#### Hay que aclarar que el *ejercicio 3* no se ejecutara si el *ejercicio 2* ha sido completado con exito, ya que dara error en un directorio ya creado, por lo cual, no puede crearlo.
 
 ```javascript
 	//Abrir Windows Explorer para verificar que ha funcionado correctamente
@@ -35,7 +38,7 @@ public class Main {
 ```
 
 ## Ejercicios.java
-```java
+```javascript
 package org.madrid.ad.ut01.ficheros;
 
 import java.io.IOException;
@@ -50,9 +53,9 @@ import java.nio.file.Paths;
 
 /**
  *  
- * @author Escribe_aqui_tu_nombre
- * @date 
- * @version 
+ * @author Oscar
+ * @date 14-09-21
+ * @version 0.1
  * @license GPLv3
  *
  */

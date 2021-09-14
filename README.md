@@ -1,7 +1,7 @@
 # EjerciciosFicheros1.1 OSCAR GONZALEZ	
 ## Main.java
 
-```java
+```javascript
 	//Abrir Windows Explorer para verificar que ha funcionado correctamente
 package org.madrid.ad.ut01.ficheros;
 
@@ -33,8 +33,8 @@ public class Main {
 }
 
 ```
-
-### Ejercicios.java
+#----------------------------------------
+## Ejercicios.java
 ```javascript
 package org.madrid.ad.ut01.ficheros;
 

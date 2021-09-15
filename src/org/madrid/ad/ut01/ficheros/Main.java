@@ -6,7 +6,7 @@ public class Main {
 			
 			
 			System.out.println("------------ Ejercicio 1 ------------\n");
-			String[]lista = ejercicios.listarDirectorio("F:\\Programacion\\Nueva carpeta");
+			String[]lista = ejercicios.listarDirectorio(args[0]);
 			if(lista==null) System.out.println("El directorio esta vacio");
 			else for(int i=0;i<lista.length;i++) System.out.println(lista[i]);
 			

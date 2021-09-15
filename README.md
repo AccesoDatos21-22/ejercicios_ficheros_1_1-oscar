@@ -107,11 +107,15 @@ Por ultimo, borramos el segundo con el comando _delete()_ y creamos el tercer ar
 ```
 - ## Ejercicio 3
 Para poder hacer la misma tarea que el ejercicio anterior, pero usando el paquete NIO, cambia la cosa.  
-Debes importar del paquete las clases Paths, Path y Files. De momento son las unicas que usaremos.  
+Debes importar del paquete las clases Paths, Path y Files. De momento son las unicas que usaremos.
+
 Para crear una instancia del archivo, o en este caso, un Path debemos usar _Paths_ con el metodo _.get()_, con el nombre del archivo.  
-Esto se aplica tanto a carpetas como a archivos.  
+Esto se aplica tanto a carpetas como a archivos.
+
 Para crear un directorio se usa el metodo _.createDirectory_ de la clase *Files* ,para los archivos, usaremos _.createFile_.  
+
 Para renombrar un archivo usaremos, tambien de la clase *Files*, el metodo _.move()_, y como primer parametro pasaremos el archivo original y de segundo el nuevo archivo.  
+
 Es necesario meter estas lineas en un _try catch_, ya que es necesario para controlar las posibles Excepciones.  
 
 ```javascript
@@ -138,6 +142,17 @@ Es necesario meter estas lineas en un _try catch_, ya que es necesario para cont
 
 ```
 - ## Ejercicio 4
+En este ejercicio mostraremos la informacion sobre un archivo o directorio.
+Para ello usaremos un objeto _File_ con el path del mismo.
+
+Mostraremos atributos como:
+	- *.getName()*
+	- *.getParent()*
+	- *.getPath()*
+	- *.getAbsolutePath()*
+	- *.getTotalSpace()*
+	- *.getFreeSpace()*
+	- *.getUsableSpace()*
 ```javascript
 	public void infoFicheroIO(String fichero) {
 		File f1 = new File(fichero);

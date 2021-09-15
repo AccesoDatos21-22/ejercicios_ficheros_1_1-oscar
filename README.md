@@ -274,13 +274,14 @@ Salida:
 > _Path real F:\Programacion\Proyectos\Eclipse workspace\github-classroom\AccesoDatos21-22\ejercicios_ficheros_1_1-oscar\entrada.txt_
 - ## Ejercicio 9
 ### Primer Metodo .resolve()
-Este metodo nos ayuda a cambiar la ruta del Path, ya sea añadiendolo al final, como en el primer caso:\
+Este metodo nos ayuda a cambiar la ruta del Path, ya sea añadiendolo al final, como en el primer caso:
 ```javascript
 		Path p0 = Paths.get("C:\\Usuarios\\pepe\\fotos");
 		System.out.format("%s%n", p0.resolve("docs"));
 ```
 Salida:
 > C:\Usuarios\pepe\fotos\docs
+
 O tambien se puede cambiar la ruta completa:
 ```javascript
 		Path p1=Paths.get("fotos");
@@ -318,5 +319,6 @@ Resultado:
 ```
 Resultado:
 > juan\docs
+
 > ..\\..
 - ## Ejercicio 10

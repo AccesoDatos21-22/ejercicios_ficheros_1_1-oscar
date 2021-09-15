@@ -1,6 +1,6 @@
 # EjerciciosFicheros1.1 , de Oscar Gonzalez Strozzi
-#### Podemos encontrar los ejercicios, enumerados por orden, con una breve explicacion de su funcionamiento.
-#### Ademas, tenemos al principio un Main para poder probar dichos ejercicios.
+Podemos encontrar los ejercicios, enumerados por orden, con una breve explicacion de su funcionamiento.
+Ademas, tenemos al principio un Main para poder probar dichos ejercicios.
 ## Main.java
 #### En la clase <b>*MAIN*</b> se ejecutaran todos los ejercicios, usando sus respectivos métodos.
 

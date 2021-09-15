@@ -37,6 +37,16 @@ public class Main {
 			 			
 			System.out.println("\n------------ Ejercicio 7 ------------\n");
 			InterfazEjercicios.pruebasRutas02("\\user\\.\\pepe\\fotos"); 
+
+			System.out.println("\n------------ Ejercicio 8 ------------\n");
+			InterfazEjercicios.pruebasRutas03(args); 
+			
+			System.out.println("\n------------ Ejercicio 9 ------------\n");
+			InterfazEjercicios.pruebasRutas04(); 
+			
+			System.out.println("\n------------ Ejercicio 10 ------------\n");
+			InterfazEjercicios.pruebasRutas05("Usuarios\\juan\\fotos","C:\\Usuarios\\juan\\fotos","Usuarios","fotos"); 
+			
 		}
 }
 ```
@@ -338,7 +348,7 @@ Este metodo te permite comparar 2 Path para ver si las rutas acaban igual.
 Se pasa como tercer argumento el path que contiene el trozo de ruta final que quieres comparar.
 > Devuelve *True* en caso de que se cumpla. En caso contrario, devuelve *False*.
 
-####Ejemplo
+#### Ejemplo
 ```javascript
 	public static void pruebasRutas05(String ruta1, String ruta2, String comienzo, String fin) {
 		Path path1 = Paths.get(ruta1);

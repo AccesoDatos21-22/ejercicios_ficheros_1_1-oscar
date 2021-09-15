@@ -201,6 +201,7 @@ Al ejecutar el codigo dado en el ejercicio 6, nos salen una serie de valores. Es
 |   _getRoot_ |   	|   C:\	|   devuelve el Root del archivo o Null	|
 ### 6b
 En el caso de tener un Usuario llamado Pepe y la ruta existiese, el output seria distinto, no detectaría el Root del archivo, ni la ruta absoluta,  ya que al pasarle solo la ruta relativa, no sabe donde se ubica dicho archivo.
+Este es el resultado:
 
 - toString: Usuarios\Pepe
 - getFileName: Pepe
@@ -233,7 +234,7 @@ Este metodo devuelve la ruta real a traves de un URI
 		Path p1 = Paths.get("entrada.txt");
 		System.out.format("%s%n", "URI " + p1.toUri());
 ```
-Salida: URI _file:///F:/Programacion/Proyectos/Eclipse%20workspace/github-classroom/AccesoDatos21-22/ejercicios_ficheros_1_1-oscar/entrada.txt_
+> Salida: URI _file:///F:/Programacion/Proyectos/Eclipse%20workspace/github-classroom/AccesoDatos21-22/ejercicios_ficheros_1_1-oscar/entrada.txt_
 ### Segundo metodo - *.toAbsolutePath()*
 Este metodo devuelve la ruta absoluta del archivo
 ```javascript
@@ -246,7 +247,7 @@ Este metodo devuelve la ruta absoluta del archivo
 		System.out.println("Path absoluto " + fullPath);
 
 ```
-Salida: Path absoluto _F:\Programacion\Proyectos\Eclipse workspace\github-classroom\AccesoDatos21-22\ejercicios_ficheros_1_1-oscar\entrada.txt_
+> Salida: Path absoluto _F:\Programacion\Proyectos\Eclipse workspace\github-classroom\AccesoDatos21-22\ejercicios_ficheros_1_1-oscar\entrada.txt_
 
 ### Tercer metodo - *.toRealPath()*
 Este metodo devuelve la ruta real del archivo
@@ -266,6 +267,6 @@ Todos estos metodos necesitan controlar las excepciones mediannte _NoSuchFileExc
 			System.err.format("%s%n", x);
 		}
 ```
-Salida: _Path real F:\Programacion\Proyectos\Eclipse workspace\github-classroom\AccesoDatos21-22\ejercicios_ficheros_1_1-oscar\entrada.txt_
+> Salida: _Path real F:\Programacion\Proyectos\Eclipse workspace\github-classroom\AccesoDatos21-22\ejercicios_ficheros_1_1-oscar\entrada.txt_
 - ## Ejercicio 9
 - ## Ejercicio 10

@@ -145,12 +145,12 @@ public class Ejercicios implements InterfazEjercicios {
 
 ## Ejercicio 6
 |  Método invocado 	|   Valor devuelto en GNU/Linux	|   Valor devuelto en Windows	|   Descripción del método	|
-|---	|---	|---	|---	|---	|
-|   toString	|   	|   	|   	|
-|   getFileName	|   	|   	|   	|
-|   getName(0)	|   	|   	|   	|
-|   getNameCount	|   	|   	|   	|
-|   subpath(0,2)	|   	|   	|   	|
-|   getParent	|   	|   	|   	|
-|   getRoot	|   	|   	|   	|
+| ---	| ---	| ---	| ---	| 
+|   _toString_ 	|   	|   C:\Usuarios\pepe\fotos	|   Te muestra la ruta del archivo/carpeta en un string	|
+|   _getFileName_	|   	|   fotos	|   Te muestra el nombre del archivo seleccionado	|
+|   _getName(0)_	|   	|   Usuarios	|   Devuelve el nombre del primer elemento de la ruta	|
+|   _getNameCount_ |	|  3 	|  DEvuelve el numero de elementos por los que pasa hasta llegar a la ruta 	|   	
+|   _subpath(0,2)_ |	|   Usuarios\pepe	|   crea una sub Path 	|   
+|   _getParent_ |   	|   C:\Usuarios\pepe	|   devuelve la carpeta padre del archivo	|
+|   _getRoot_ |   	|   C:\	|   devuelve el Root del archivo o Null	|
 

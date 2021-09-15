@@ -322,7 +322,9 @@ Resultado:
 > ..\\..
 - ## Ejercicio 10
 ### Primer metodo .equals()
-Este metodo te permite comparar 2 Path para ver si la ruta es igual. 
+Este metodo te permite comparar 2 Path para ver si la ruta es igual.
+
+Pasas como argumento el segundo path a comparar. 
 > Devuelve *True* en caso de que se cumpla. En caso contrario, devuelve *False*.
 ### Segundo metodo .startsWith()
 Este metodo te permite comparar 2 Path para ver si las rutas empiezan igual.
@@ -335,6 +337,8 @@ Este metodo te permite comparar 2 Path para ver si las rutas acaban igual.
 
 Se pasa como tercer argumento el path que contiene el trozo de ruta final que quieres comparar.
 > Devuelve *True* en caso de que se cumpla. En caso contrario, devuelve *False*.
+
+####Ejemplo
 ```javascript
 	public static void pruebasRutas05(String ruta1, String ruta2, String comienzo, String fin) {
 		Path path1 = Paths.get(ruta1);

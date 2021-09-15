@@ -146,7 +146,7 @@ En este ejercicio mostraremos la informacion sobre un archivo o directorio.
 Para ello usaremos un objeto _File_ con el path del mismo.
 
 Mostraremos atributos como:
-	- *.getName()*
+- *.getName()*
 	- *.getParent()*
 	- *.getPath()*
 	- *.getAbsolutePath()*

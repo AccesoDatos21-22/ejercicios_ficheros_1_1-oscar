@@ -237,7 +237,7 @@ Esto es lo que hace el metodo _.normalize()_. Es muy util para arreglar Paths re
 	}
 ```
 - ## Ejercicio 8
-### Primer metodo  *.toURi()*
+### .toURi()
 
 Este metodo devuelve la ruta real a traves de un URI
 ```javascript
@@ -247,7 +247,7 @@ Este metodo devuelve la ruta real a traves de un URI
 Salida:
 >  URI _file:///F:/Programacion/Proyectos/Eclipse%20workspace/github-classroom/AccesoDatos21-22/ejercicios_ficheros_1_1-oscar/entrada.txt_
 	<hr/>
-### Segundo metodo  *.toAbsolutePath()*
+### .toAbsolutePath()
 Este metodo devuelve la ruta absoluta del archivo
 ```javascript
 		if (args.length < 1) {
@@ -262,7 +262,7 @@ Este metodo devuelve la ruta absoluta del archivo
 Salida:
 >  Path absoluto _F:\Programacion\Proyectos\Eclipse workspace\github-classroom\AccesoDatos21-22\ejercicios_ficheros_1_1-oscar\entrada.txt_
 	<hr/>
-### Tercer metodo  *.toRealPath()*
+### .toRealPath()
 Este metodo devuelve la ruta real del archivo
 ```javascript
 		Path p2 = Paths.get("./entrada.txt");
@@ -283,7 +283,7 @@ Todos estos metodos necesitan controlar las excepciones mediannte _NoSuchFileExc
 Salida: 
 > _Path real F:\Programacion\Proyectos\Eclipse workspace\github-classroom\AccesoDatos21-22\ejercicios_ficheros_1_1-oscar\entrada.txt_
 - ## Ejercicio 9
-### Primer Metodo .resolve()
+### .resolve()
 Este metodo nos ayuda a cambiar la ruta del Path, ya sea añadiendolo al final, como en el primer caso:
 ```javascript
 		Path p0 = Paths.get("C:\\Usuarios\\pepe\\fotos");
@@ -300,7 +300,7 @@ O tambien se puede cambiar la ruta completa:
 Salida:
 > C:\Usuarios\pepe
 
-### Segundo Metodo .relativize()
+### .relativize()
 Este metodo nos permite hacer una ruta relativa entre las dos rutas dadas. 
 
 Hay que aclarar, que si una de las rutas contiene el directorio Raiz (C:/), no se podra aplicar el metodo.
@@ -331,18 +331,18 @@ Resultado:
 > juan\docs  
 > ..\\..
 - ## Ejercicio 10
-### Primer metodo .equals()
+### .equals()
 Este metodo te permite comparar 2 Path para ver si la ruta es igual.
 
 Pasas como argumento el segundo path a comparar. 
 > Devuelve *True* en caso de que se cumpla. En caso contrario, devuelve *False*.
-### Segundo metodo .startsWith()
+### .startsWith()
 Este metodo te permite comparar 2 Path para ver si las rutas empiezan igual.
 
 Se pasa como tercer argumento el path que contiene el trozo de ruta inicial que quieres comparar.
 > Devuelve *True* en caso de que se cumpla. En caso contrario, devuelve *False*.
 
-### Tercer metodo .endsWith()
+### .endsWith()
 Este metodo te permite comparar 2 Path para ver si las rutas acaban igual.
 
 Se pasa como tercer argumento el path que contiene el trozo de ruta final que quieres comparar.

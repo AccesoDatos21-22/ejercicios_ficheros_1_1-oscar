@@ -236,7 +236,7 @@ Este metodo devuelve la ruta real a traves de un URI
 ```
 Salida:
 >  URI _file:///F:/Programacion/Proyectos/Eclipse%20workspace/github-classroom/AccesoDatos21-22/ejercicios_ficheros_1_1-oscar/entrada.txt_
-<hr/>
+	<hr/>
 ### Segundo metodo  *.toAbsolutePath()*
 Este metodo devuelve la ruta absoluta del archivo
 ```javascript
@@ -251,7 +251,7 @@ Este metodo devuelve la ruta absoluta del archivo
 ```
 Salida:
 >  Path absoluto _F:\Programacion\Proyectos\Eclipse workspace\github-classroom\AccesoDatos21-22\ejercicios_ficheros_1_1-oscar\entrada.txt_
-
+	<hr/>
 ### Tercer metodo  *.toRealPath()*
 Este metodo devuelve la ruta real del archivo
 ```javascript
@@ -273,4 +273,50 @@ Todos estos metodos necesitan controlar las excepciones mediannte _NoSuchFileExc
 Salida: 
 > _Path real F:\Programacion\Proyectos\Eclipse workspace\github-classroom\AccesoDatos21-22\ejercicios_ficheros_1_1-oscar\entrada.txt_
 - ## Ejercicio 9
+### Primer Metodo .resolve()
+Este metodo nos ayuda a cambiar la ruta del Path, ya sea añadiendolo al final, como en el primer caso:\
+```javascript
+		Path p0 = Paths.get("C:\\Usuarios\\pepe\\fotos");
+		System.out.format("%s%n", p0.resolve("docs"));
+```
+Salida:
+> C:\Usuarios\pepe\fotos\docs
+O tambien se puede cambiar la ruta completa:
+```javascript
+		Path p1=Paths.get("fotos");
+		System.out.format("%s%n", p1.resolve("C:\\Usuarios\\pepe"));
+```
+Salida:
+> C:\Usuarios\pepe
+
+### Segundo Metodo .relativize()
+Este metodo nos permite hacer una ruta relativa entre las dos rutas dadas. 
+
+Hay que aclarar, que si una de las rutas contiene el directorio Raiz (C:/), no se podra aplicar el metodo.
+```javascript
+		Path p2 = Paths.get("pepe");
+		Path p3 = Paths.get("juan");
+		Path p2_to_p3 = p2.relativize(p3);
+		System.out.format("%s%n", p2_to_p3);
+
+		Path p3_to_p2 = p3.relativize(p2);
+		System.out.format("%s%n", p3_to_p2);
+```
+Resultado:
+> ..\juan
+> ..\pepe
+
+```javascript
+		Path p4 = Paths.get("Usuarios");
+		Path p5 = Paths.get("Usuarios\\juan\\docs");
+
+		Path p4_to_p5 = p4.relativize(p5);
+		System.out.format("%s%n", p4_to_p5);
+
+		Path p5_to_p4 = p5.relativize(p4);
+		System.out.format("%s%n",p5_to_p4);
+```
+Resultado:
+> juan\docs
+> ..\\..
 - ## Ejercicio 10

@@ -36,5 +36,8 @@ public class Main {
 			System.out.println("\n------------ Ejercicio 8 ------------\n");
 			InterfazEjercicios.pruebasRutas03(args); 
 			
+			System.out.println("\n------------ Ejercicio 9 ------------\n");
+			InterfazEjercicios.pruebasRutas04(); 
+			
 		}
 }

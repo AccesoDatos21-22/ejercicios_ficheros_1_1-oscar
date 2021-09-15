@@ -1,13 +1,11 @@
 # EjerciciosFicheros1.1 , de Oscar Gonzalez Strozzi
-### Incompleto
+#### Podemos encontrar los ejercicios, enumerados por orden, con una breve explicacion de su funcionamiento.
+#### Ademas, tenemos al principio un Main para poder probar dichos ejercicios.
 ## Main.java
 #### En la clase <b>*MAIN*</b> se ejecutaran todos los ejercicios, usando sus respectivos métodos.
 
 
 ```javascript
-	
-package org.madrid.ad.ut01.ficheros;
-
 public class Main {
 		public static void main(String[]args) {
 			Ejercicios ejercicios = new Ejercicios();
@@ -34,7 +32,6 @@ public class Main {
 			ejercicios.infoFicheroNIO("C:\\Users\\triss\\Downloads\\a.png");
 		}
 }
-
 ```
 
 ## Ejercicio 1

@@ -146,13 +146,13 @@ En este ejercicio mostraremos la informacion sobre un archivo o directorio.
 Para ello usaremos un objeto _File_ con el path del mismo.
 
 Mostraremos atributos como:
-- *.getName()*
-	- *.getParent()*
-	- *.getPath()*
-	- *.getAbsolutePath()*
-	- *.getTotalSpace()*
-	- *.getFreeSpace()*
-	- *.getUsableSpace()*
+- *.getName()*  - Devuelve el nombre del archivo
+- *.getParent()* - Devuelve la carpeta Padre
+- *.getPath()* - Devuelve la ruta 
+- *.getAbsolutePath()* - Devuelve la ruta Absoluta
+- *.getTotalSpace()* - Devuelve el espacio total
+- *.getFreeSpace()* - Devuelve el espacio libre
+- *.getUsableSpace()* - Devuelve el espacio usado
 ```javascript
 	public void infoFicheroIO(String fichero) {
 		File f1 = new File(fichero);

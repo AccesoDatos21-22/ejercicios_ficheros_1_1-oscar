@@ -353,20 +353,30 @@ Se pasa como tercer argumento el path que contiene el trozo de ruta final que qu
 	public static void pruebasRutas05(String ruta1, String ruta2, String comienzo, String fin) {
 		Path path1 = Paths.get(ruta1);
 		Path path2 = Paths.get(ruta2);
-		Path inicio = Paths.get(comienzo);
-		Path pathFin = Paths.get(fin);
 		if(path1.equals(path2)) {
-			System.out.println("Ruta 1 y 2 comienzan por: " + comienzo.toString()+", y acaban por: "+ fin.toString());
+			System.out.println("Ruta 1 y 2 son iguales");
 		}
 		if (path1.startsWith(comienzo) && path2.startsWith(comienzo)) {
-			System.out.println("Ruta 1 y 2 comienzan por: " + comienzo.toString());
+			System.out.println("Ruta 1 y 2 comienzan por: " + comienzo);
 		
 		} 
 		if(path1.endsWith(fin) && path2.endsWith(fin)){
-			System.out.println("Ruta 1 y 2 finalizan por: " + fin.toString());
+			System.out.println("Ruta 1 y 2 finalizan por: " + fin);
 		
 		}
 		else System.out.println("Las rutas dadas no empiezan ni acaban igual.");
+	}
+```
+#### Ejemplo 2
+```javascript
+	public static void pruebasRutas05(String ruta1, String ruta2, String comienzo) {
+		Path path1 = Paths.get(ruta1);
+		Path path2 = Paths.get(ruta2);
+		if (path1.startsWith(comienzo) && path2.startsWith(comienzo)) {
+			System.out.println("Ruta 1 y 2 comienzan por: " + comienzo);
+		} else
+			System.out.println("Las rutas dadas no empiezan igual.");
+
 	}
 ```
 

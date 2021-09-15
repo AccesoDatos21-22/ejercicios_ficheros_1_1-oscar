@@ -39,5 +39,8 @@ public class Main {
 			System.out.println("\n------------ Ejercicio 9 ------------\n");
 			InterfazEjercicios.pruebasRutas04(); 
 			
+			System.out.println("\n------------ Ejercicio 10 ------------\n");
+			InterfazEjercicios.pruebasRutas05("Usuarios\\juan\\fotos","C:\\Usuarios\\juan\\fotos","Usuarios","fotos"); 
+			
 		}
 }

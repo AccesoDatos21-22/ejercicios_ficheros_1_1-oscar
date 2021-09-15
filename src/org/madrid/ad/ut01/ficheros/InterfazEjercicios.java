@@ -8,8 +8,8 @@ import java.nio.file.Paths;
 /**
  * 
  * @author Oscar Gonzalez Strozzi
- * @date 
- * @version 
+ * @date
+ * @version
  * @license GPLv3
  *
  */
@@ -23,7 +23,7 @@ public interface InterfazEjercicios {
 	 */
 
 	public void borrarCarpetas();
-	
+
 	public String[] listarDirectorio(String directorio);
 
 	/**
@@ -36,7 +36,6 @@ public interface InterfazEjercicios {
 	 */
 	public void crearFicherosIO();
 
-	
 	/**
 	 * realice la misma función que el método listarDirectorio pero utilizando las
 	 * clases Path y Files de java.nio.
@@ -77,9 +76,9 @@ public interface InterfazEjercicios {
 
 	static void pruebasRutas02(String fichero) {
 		Path path1 = Paths.get("/home/./pepe/fotos");
-		Path path2= Paths.get("/home/juan/../pepe/fotos");
-		System.out.println("a."+ path1.toString()+" pasa a->" +path1.normalize().toString());
-		System.out.println("b"+ path2.toString()+" pasa a->" +path2.normalize().toString());
+		Path path2 = Paths.get("/home/juan/../pepe/fotos");
+		System.out.println("a." + path1.toString() + " pasa a->" + path1.normalize().toString());
+		System.out.println("b" + path2.toString() + " pasa a->" + path2.normalize().toString());
 	}
 
 	/*
@@ -165,11 +164,33 @@ public interface InterfazEjercicios {
 	}
 
 	public static void pruebasRutas05(String ruta1, String ruta2, String comienzo) {
+		Path path1 = Paths.get(ruta1);
+		Path path2 = Paths.get(ruta2);
+		Path inicio = Paths.get(comienzo);
+		if (path1.startsWith(comienzo) && path2.startsWith(comienzo)) {
+			System.out.println("Ruta 1 y 2 comienzan por: " + comienzo.toString());
+		} else
+			System.out.println("Las rutas dadas no empiezan igual.");
 
 	}
 
 	public static void pruebasRutas05(String ruta1, String ruta2, String comienzo, String fin) {
-
+		Path path1 = Paths.get(ruta1);
+		Path path2 = Paths.get(ruta2);
+		Path inicio = Paths.get(comienzo);
+		Path pathFin = Paths.get(fin);
+		if(path1.equals(path2)) {
+			System.out.println("Ruta 1 y 2 comienzan por: " + comienzo.toString()+", y acaban por: "+ fin.toString());
+		}
+		if (path1.startsWith(comienzo) && path2.startsWith(comienzo)) {
+			System.out.println("Ruta 1 y 2 comienzan por: " + comienzo.toString());
+		
+		} 
+		if(path1.endsWith(fin) && path2.endsWith(fin)){
+			System.out.println("Ruta 1 y 2 finalizan por: " + fin.toString());
+		
+		}
+		else System.out.println("Las rutas dadas no empiezan ni acaban igual.");
 	}
 
 }

@@ -304,7 +304,7 @@ Hay que aclarar, que si una de las rutas contiene el directorio Raiz (C:/), no s
 		System.out.format("%s%n", p3_to_p2);
 ```
 Resultado:
-> ..\juan
+> ..\juan  
 > ..\pepe
 
 ```javascript
@@ -321,3 +321,38 @@ Resultado:
 > juan\docs  
 > ..\\..
 - ## Ejercicio 10
+### Primer metodo .equals()
+Este metodo te permite comparar 2 Path para ver si la ruta es igual. 
+> Devuelve *True* en caso de que se cumpla. En caso contrario, devuelve *False*.
+### Segundo metodo .startsWith()
+Este metodo te permite comparar 2 Path para ver si las rutas empiezan igual.
+
+Se pasa como tercer argumento el path que contiene el trozo de ruta inicial que quieres comparar.
+> Devuelve *True* en caso de que se cumpla. En caso contrario, devuelve *False*.
+
+### Tercer metodo .endsWith()
+Este metodo te permite comparar 2 Path para ver si las rutas acaban igual.
+
+Se pasa como tercer argumento el path que contiene el trozo de ruta final que quieres comparar.
+> Devuelve *True* en caso de que se cumpla. En caso contrario, devuelve *False*.
+```javascript
+	public static void pruebasRutas05(String ruta1, String ruta2, String comienzo, String fin) {
+		Path path1 = Paths.get(ruta1);
+		Path path2 = Paths.get(ruta2);
+		Path inicio = Paths.get(comienzo);
+		Path pathFin = Paths.get(fin);
+		if(path1.equals(path2)) {
+			System.out.println("Ruta 1 y 2 comienzan por: " + comienzo.toString()+", y acaban por: "+ fin.toString());
+		}
+		if (path1.startsWith(comienzo) && path2.startsWith(comienzo)) {
+			System.out.println("Ruta 1 y 2 comienzan por: " + comienzo.toString());
+		
+		} 
+		if(path1.endsWith(fin) && path2.endsWith(fin)){
+			System.out.println("Ruta 1 y 2 finalizan por: " + fin.toString());
+		
+		}
+		else System.out.println("Las rutas dadas no empiezan ni acaban igual.");
+	}
+```
+

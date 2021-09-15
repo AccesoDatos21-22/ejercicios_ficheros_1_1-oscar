@@ -1,11 +1,15 @@
 # EjerciciosFicheros1.1 , de Oscar Gonzalez Strozzi
 Podemos encontrar los ejercicios, enumerados por orden, con una breve explicacion de su funcionamiento.  
 Ademas, tenemos al principio un Main para poder probar dichos ejercicios.  
+### Puedes econtrar el archivo de las actividades <a href="https://docs.google.com/document/d/1S2EpQpp3fqFGomqee0weC8Ub5bsevZ_VAzoEUYSCYCw/edit" target="_blank">aqui</a>.
+
+
+
 ## Main.java
 En la clase <b>*Main*</b> se ejecutaran todos los ejercicios, usando sus respectivos métodos.<br />
 El metodo _*borrarCarpetas()*_ se repite antes de ejecutar ejercicios 2 y 3.  
 
-### Puedes econtrar el archivo de las actividades <a href="https://docs.google.com/document/d/1S2EpQpp3fqFGomqee0weC8Ub5bsevZ_VAzoEUYSCYCw/edit" target="_blank">aqui</a>.
+
 
 ```javascript
 public class Main {

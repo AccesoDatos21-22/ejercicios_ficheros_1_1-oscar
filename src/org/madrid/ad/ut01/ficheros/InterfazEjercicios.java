@@ -76,7 +76,10 @@ public interface InterfazEjercicios {
 	}
 
 	static void pruebasRutas02(String fichero) {
-
+		Path path1 = Paths.get("/home/./pepe/fotos");
+		Path path2= Paths.get("/home/juan/../pepe/fotos");
+		System.out.println("a."+ path1.toString()+" pasa a->" +path1.normalize().toString());
+		System.out.println("b"+ path2.toString()+" pasa a->" +path2.normalize().toString());
 	}
 
 	/*
@@ -99,7 +102,7 @@ public interface InterfazEjercicios {
 			System.exit(-1);
 		}
 
-		Path inputPath = Paths.get(args[0]);
+		Path inputPath = Paths.get(args[1]);
 		Path fullPath = inputPath.toAbsolutePath();
 
 		System.out.println("Path absoluto " + fullPath);

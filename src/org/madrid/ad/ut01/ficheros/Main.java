@@ -28,7 +28,13 @@ public class Main {
 			
 
 			System.out.println("\n------------ Ejercicio 6 ------------\n");
-			 Ejercicios.pruebasRutas01("Usuarios\\Pepe"); 
+			InterfazEjercicios.pruebasRutas01("Usuarios\\Pepe");
+			
+			System.out.println("\n------------ Ejercicio 7 ------------\n");
+			InterfazEjercicios.pruebasRutas02("\\user\\.\\pepe\\fotos"); 
+			
+			System.out.println("\n------------ Ejercicio 8 ------------\n");
+			InterfazEjercicios.pruebasRutas03(args); 
 			
 		}
 }

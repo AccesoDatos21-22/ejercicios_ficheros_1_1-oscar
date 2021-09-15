@@ -29,13 +29,14 @@ public class Main {
 			System.out.println("\n------------ Ejercicio 4 ------------\n");
 			ejercicios.infoFicheroIO("C:\\Users\\triss\\Downloads\\a.png");
 			
-		
 			System.out.println("\n------------ Ejercicio 5 ------------\n");
 			ejercicios.infoFicheroNIO("C:\\Users\\triss\\Downloads\\a.png");
 			
-
 			System.out.println("\n------------ Ejercicio 6 ------------\n");
-			 Ejercicios.pruebasRutas01("Usuarios\\Pepe"); 
+			InterfazEjercicios.pruebasRutas01("Usuarios\\Pepe"); 
+			 			
+			System.out.println("\n------------ Ejercicio 7 ------------\n");
+			InterfazEjercicios.pruebasRutas02("\\user\\.\\pepe\\fotos"); 
 		}
 }
 ```
@@ -79,7 +80,7 @@ Para crear el archivo 1 y 2 hacemos el mismo proceso, solo que colocando la nuev
 
 Para renombrar un archivo, debemos crear un objeto File intermedio, al que pondremos el nuevo nombre. Luego al objeto que queremos cambiar usamos _.renameTo()_ y meter dentro el nuevo objeto _File_. 
 
-Por ultimo, borramos el segundo con el comando _delete()_ y creamos el tercer archivo.  
+Por ultimo, borramos el segundo con el comando _.delete()_ y creamos el tercer archivo.  
 ```javascript
 	public void crearFicherosIO() {
 		File directorio = new File("NUEVODIR");
@@ -198,4 +199,73 @@ Al ejecutar el codigo dado en el ejercicio 6, nos salen una serie de valores. Es
 |   _subpath(0,2)_ |	|   Usuarios\pepe	|   crea una sub Path 	|   
 |   _getParent_ |   	|   C:\Usuarios\pepe	|   devuelve la carpeta padre del archivo	|
 |   _getRoot_ |   	|   C:\	|   devuelve el Root del archivo o Null	|
+### 6b
+En el caso de tener un Usuario llamado Pepe y la ruta existiese, el output seria distinto, no detectaría el Root del archivo, ni la ruta absoluta,  ya que al pasarle solo la ruta relativa, no sabe donde se ubica dicho archivo.
 
+- toString: Usuarios\Pepe
+- getFileName: Pepe
+- getName(0): Usuarios
+- getNameCount: 2
+- subpath(0,2): Usuarios\Pepe
+- getParent: Usuarios
+- getRoot: null
+
+- ## Ejercicio 7
+Para borrar datos redundantes en un path, utilizamos el metodo _.normalize()_, de la clase *Path*.
+
+Como observamos, en la primera, la parte "_/./_" es eliminada, ya que redunda en su propia carpeta.
+En el segundo caso, primero entramos a la carpeta "_/juan/_", despues salimos "_/../_", y posteriormente accedemos nuevamente a "_/pepe/fotos_". Esto hace que las primeras partes del path sean innecesarias, por lo que podemos quitarlas.
+
+Esto es lo que hace el metodo _.normalize()_. Es muy util para arreglar Paths redundantes.
+```javascript
+	static void pruebasRutas02(String fichero) {
+		Path path1 = Paths.get("/home/./pepe/fotos");
+		Path path2= Paths.get("/home/juan/../pepe/fotos");
+		System.out.println("a."+ path1.toString()+" pasa a->" +path1.normalize().toString());
+		System.out.println("b"+ path2.toString()+" pasa a->" +path2.normalize().toString());
+	}
+```
+- ## Ejercicio 8
+### Primer metodo - *.toURi()*
+
+Este metodo devuelve la ruta real a traves de un URI
+```javascript
+		Path p1 = Paths.get("entrada.txt");
+		System.out.format("%s%n", "URI " + p1.toUri());
+```
+Salida: URI _file:///F:/Programacion/Proyectos/Eclipse%20workspace/github-classroom/AccesoDatos21-22/ejercicios_ficheros_1_1-oscar/entrada.txt_
+### Segundo metodo - *.toAbsolutePath()*
+Este metodo devuelve la ruta absoluta del archivo
+```javascript
+		if (args.length < 1) {
+			System.out.println("debes pasar un nombre de archivo como argumento");
+			System.exit(-1);
+		}
+		Path inputPath = Paths.get(args[1]);
+		Path fullPath = inputPath.toAbsolutePath();
+		System.out.println("Path absoluto " + fullPath);
+
+```
+Salida: Path absoluto _F:\Programacion\Proyectos\Eclipse workspace\github-classroom\AccesoDatos21-22\ejercicios_ficheros_1_1-oscar\entrada.txt_
+
+### Tercer metodo - *.toRealPath()*
+Este metodo devuelve la ruta real del archivo
+```javascript
+		Path p2 = Paths.get("./entrada.txt");
+		try {
+			Path fp = p2.toRealPath();
+			System.out.println("Path real " + fp);
+		} 
+```
+Todos estos metodos necesitan controlar las excepciones mediannte _NoSuchFileException_ y _IOException_.
+```javascript
+		catch (NoSuchFileException x) {
+			System.err.format("%s: no existe" + " el fichero o directorio %n",p2);
+
+		} catch (IOException x) {
+			System.err.format("%s%n", x);
+		}
+```
+Salida: _Path real F:\Programacion\Proyectos\Eclipse workspace\github-classroom\AccesoDatos21-22\ejercicios_ficheros_1_1-oscar\entrada.txt_
+- ## Ejercicio 9
+- ## Ejercicio 10

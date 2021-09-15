@@ -318,7 +318,6 @@ Resultado:
 		System.out.format("%s%n",p5_to_p4);
 ```
 Resultado:
-> juan\docs
-
+> juan\docs 
 > ..\\..
 - ## Ejercicio 10

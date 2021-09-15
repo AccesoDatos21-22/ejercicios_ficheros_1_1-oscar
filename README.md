@@ -73,7 +73,8 @@ Lo que hace este metodo es borrar todo contenido del directorio _NUEVODIR_ y la 
 ```
 - ## Ejercicio 2
 Para crear ficheros usando el paquete *IO*, usamos la clase _File_.  
-Primero debemos crear el directorio. Esto lo hacemos creando un objeto File (_al que llamaremos directorio_), y crearemos dicha carpeta con el comando _.mkdir()_.  <br/>
+Primero debemos crear el directorio. Esto lo hacemos creando un objeto File (_al que llamaremos directorio_), y crearemos dicha carpeta con el comando _.mkdir()_.  
+  
 Para crear el archivo 1 y 2 hacemos el mismo proceso, solo que colocando la nueva ruta(en nuestro caso la nueva carpeta creada), y creamos el archivo con _.createNewFile()_.  
 Para renombrar un archivo, debemos crear un objeto File intermedio, al que pondremos el nuevo nombre. Luego al objeto que queremos cambiar usamos _.renameTo()_ y meter dentro el nuevo objeto _File_.  
 Por ultimo, borramos el segundo con el comando _delete()_ y creamos el tercer archivo.  

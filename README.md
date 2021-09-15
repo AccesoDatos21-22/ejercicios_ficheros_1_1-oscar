@@ -2,7 +2,8 @@
 Podemos encontrar los ejercicios, enumerados por orden, con una breve explicacion de su funcionamiento.
 Ademas, tenemos al principio un Main para poder probar dichos ejercicios.
 ## Main.java
-#### En la clase <b>*MAIN*</b> se ejecutaran todos los ejercicios, usando sus respectivos métodos.
+En la clase <b>*Main*</b> se ejecutaran todos los ejercicios, usando sus respectivos métodos.
+El metodo _*borrarCarpetas()*_ se repite antes de ejecutar ejercicios 2 y 3.
 
 
 ```javascript
@@ -39,7 +40,9 @@ public class Main {
 }
 ```
 
-- - ## Ejercicio 1
+- ## Ejercicio 1
+Creamos un archivo File con el directorio pasado por parametro. Verificamos si existe contenido en la carpeta, y en caso contrario devolvemos null.
+Si existen ficheros, el metodo devuelve la lista en un *array[]* usando _.list()_.
 ```javascript
 	public String[] listarDirectorio(String directorio) {
 		File file = new File(directorio);

@@ -5,7 +5,7 @@ Ademas, tenemos al principio un Main para poder probar dichos ejercicios.
 En la clase <b>*Main*</b> se ejecutaran todos los ejercicios, usando sus respectivos métodos.<br />
 El metodo _*borrarCarpetas()*_ se repite antes de ejecutar ejercicios 2 y 3.  
 
- <a href="https://docs.google.com/document/d/1S2EpQpp3fqFGomqee0weC8Ub5bsevZ_VAzoEUYSCYCw/edit"target="_blank"></a>
+ <a href="https://docs.google.com/document/d/1S2EpQpp3fqFGomqee0weC8Ub5bsevZ_VAzoEUYSCYCw/edit" target="_blank">link</a>
 
 ```javascript
 public class Main {

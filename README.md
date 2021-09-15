@@ -39,7 +39,7 @@ public class Main {
 }
 ```
 
-## Ejercicio 1
+- - ## Ejercicio 1
 ```javascript
 	public String[] listarDirectorio(String directorio) {
 		File file = new File(directorio);
@@ -49,7 +49,7 @@ public class Main {
 	}
 ```
 
-## Metodo _borrarCarpetas()_ 
+- ## Metodo _borrarCarpetas()_ 
 #### Este metodo se crea para poder ejecutar el ejercicio 2 y 3, sin tener conflicto entre ellos. 
 #### Lo que hace este metodo es borrar todo contenido del directorio _NUEVODIR_, en caso de que existiese.
 ```javascript
@@ -68,7 +68,7 @@ public class Main {
 		
 	}
 ```
-## Ejercicio 2
+- ## Ejercicio 2
 ```javascript
 	public void crearFicherosIO() {
 		File directorio = new File("NUEVODIR");
@@ -94,7 +94,7 @@ public class Main {
 	}
 
 ```
-## Ejercicio 3
+- ## Ejercicio 3
 ```javascript
 	public void crearFicherosNIO() {
 		Path pathCarpeta = Paths.get("NUEVODIR");
@@ -118,7 +118,7 @@ public class Main {
 	}
 
 ```
-## Ejercicio 4
+- ## Ejercicio 4
 ```javascript
 	public void infoFicheroIO(String fichero) {
 		File f1 = new File(fichero);
@@ -145,7 +145,7 @@ public class Main {
 	}
 ```
 
-## Ejercicio 6
+- ## Ejercicio 6
 |  Método invocado 	|   Valor devuelto en GNU/Linux	|   Valor devuelto en Windows	|   Descripción del método	|
 | ---	| ---	| ---	| ---	| 
 |   _toString_ 	|   	|   C:\Usuarios\pepe\fotos	|   Te muestra la ruta del archivo/carpeta en un string	|

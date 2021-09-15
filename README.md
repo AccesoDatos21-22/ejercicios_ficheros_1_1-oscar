@@ -37,39 +37,39 @@ public class Main {
 
 ```
 
-## Ejercicios.java
+## Ejercicio 1
 ```javascript
-package org.madrid.ad.ut01.ficheros;
-
-import java.io.IOException;
-
-import java.io.File;
-import java.io.IOException;
-
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
-
-/**
- *  
- * @author Oscar
- * @date 14-09-21
- * @version 0.1
- * @license GPLv3
- *
- */
-public class Ejercicios implements InterfazEjercicios {
-
-	@Override
 	public String[] listarDirectorio(String directorio) {
 		File file = new File(directorio);
 		if(file.list().length==0) return null;
 		return file.list();
 
 	}
+```
 
-	@Override
+## Metodo _borrarCarpetas()_ 
+#### Este metodo se crea para poder ejecutar el ejercicio 2 y 3, sin tener conflicto entre ellos. 
+#### Lo que hace este metodo es borrar todo contenido del directorio _NUEVODIR_, en caso de que existiese.
+```javascript
+	public void borrarCarpetas() {
+
+		Path file = Paths.get("NUEVODIR");
+
+		try(DirectoryStream<Path> stream = Files.newDirectoryStream(file)){
+			
+			for(Path a: stream) {
+				Files.delete(a);
+				
+			}
+			Files.deleteIfExists(file);
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+```
+## Ejercicio 2
+```javascript
 	public void crearFicherosIO() {
 		File directorio = new File("NUEVODIR");
 		directorio.mkdir();
@@ -93,7 +93,9 @@ public class Ejercicios implements InterfazEjercicios {
 		
 	}
 
-	@Override
+```
+## Ejercicio 3
+```javascript
 	public void crearFicherosNIO() {
 		Path pathCarpeta = Paths.get("NUEVODIR");
 		Path pathArchivo1 = Paths.get("FICHERO1.TXT");
@@ -115,7 +117,9 @@ public class Ejercicios implements InterfazEjercicios {
 		
 	}
 
-	@Override
+```
+## Ejercicio 4
+```javascript
 	public void infoFicheroIO(String fichero) {
 		File f1 = new File(fichero);
 		System.out.println("Nombre: "+ f1.getName());
@@ -127,7 +131,9 @@ public class Ejercicios implements InterfazEjercicios {
 		System.out.println("Espacio Usable: "+ f1.getUsableSpace());
 	}
 
-	@Override
+```
+## Ejercicio 5
+```javascript
 	public void infoFicheroNIO(String fichero) {
 		Path path = Paths.get(fichero);
 		System.out.println("Nombre: "+path.getFileName());
@@ -135,12 +141,8 @@ public class Ejercicios implements InterfazEjercicios {
 		System.out.println("Padre: "+path.getParent());
 		System.out.println("Raiz: "+path.getRoot());
 		System.out.println("Elementos : "+path.getNameCount());
+		}
 	}
-
-
-
-}
-
 ```
 
 ## Ejercicio 6

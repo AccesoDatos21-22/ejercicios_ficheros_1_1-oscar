@@ -59,7 +59,7 @@ public class Ejercicios implements InterfazEjercicios {
 		Path pathArchivo1_1 = Paths.get("NUEVODIR/FICHERO1NUEVO.TXT");
 		Path pathArchivo2 = Paths.get("NUEVODIR/FICHERO2.TXT");
 		
-		pathArchivo1.resolve(pathArchivo2);
+		
 		Path pathArchivo3 = Paths.get("NUEVODIR/FICHERO3.TXT");
 		try {
 			Files.createDirectory(pathCarpeta);

@@ -132,7 +132,7 @@ public class Main {
 	}
 
 ```
-## - Ejercicio 5
+- ## Ejercicio 5
 ```javascript
 	public void infoFicheroNIO(String fichero) {
 		Path path = Paths.get(fichero);

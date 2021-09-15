@@ -22,6 +22,8 @@ public interface InterfazEjercicios {
 	 * @return contenido de la ruta recibido
 	 */
 
+	public void borrarCarpetas();
+	
 	public String[] listarDirectorio(String directorio);
 
 	/**

@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import java.io.File;
 import java.io.IOException;
-
+import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -58,6 +58,7 @@ public class Ejercicios implements InterfazEjercicios {
 		Path pathArchivo1 = Paths.get("FICHERO1.TXT");
 		Path pathArchivo1_1 = Paths.get("NUEVODIR/FICHERO1NUEVO.TXT");
 		Path pathArchivo2 = Paths.get("NUEVODIR/FICHERO2.TXT");
+		pathArchivo1.resolve(pathArchivo2);
 		Path pathArchivo3 = Paths.get("NUEVODIR/FICHERO3.TXT");
 		try {
 			Files.createDirectory(pathCarpeta);
@@ -95,6 +96,37 @@ public class Ejercicios implements InterfazEjercicios {
 		System.out.println("Raiz: "+path.getRoot());
 		System.out.println("Elementos : "+path.getNameCount());
 	}
+
+	@Override
+	public void borrarCarpetas() {
+
+		Path file = Paths.get("NUEVODIR");
+
+		try(DirectoryStream<Path> stream = Files.newDirectoryStream(file)){
+			
+			for(Path a: stream) {
+				Files.delete(a);
+				
+			}
+			Files.deleteIfExists(file);
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+	public static void pruebasRutas01(String fichero){
+        Path path = Paths.get(fichero);            	
+
+         	
+         	  System.out.format("toString: %s%n", path.toString());
+         	  System.out.format("getFileName: %s%n", path.getFileName());
+         	  System.out.format("getName(0): %s%n", path.getName(0));
+         	  System.out.format("getNameCount: %d%n", path.getNameCount());
+         	  System.out.format("subpath(0,2): %s%n", path.subpath(0,2));
+         	  System.out.format("getParent: %s%n", path.getParent());
+         	  System.out.format("getRoot: %s%n", path.getRoot());
+             }
+
 
 
 

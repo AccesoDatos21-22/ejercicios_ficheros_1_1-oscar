@@ -2,7 +2,7 @@
 ### Incompleto
 ## Main.java
 #### En la clase <b>*MAIN*</b> se ejecutaran todos los ejercicios, usando sus respectivos métodos.
-#### Hay que aclarar que el *ejercicio 3* no se ejecutara si el *ejercicio 2* ha sido completado con exito, ya que dara error en un directorio ya creado, por lo cual, no puede crearlo.
+
 
 ```javascript
 	
@@ -142,3 +142,15 @@ public class Ejercicios implements InterfazEjercicios {
 }
 
 ```
+
+##Ejercicio 6
+|  Método invocado 	|   Valor devuelto en GNU/Linux	|   Valor devuelto en Windows	|   Descripción del método	|
+		|---	|---	|---	|---	|---	|
+toString|   	|   	|   	|   	|   	|
+getFileName|   	|   	|   	|   	|   	|
+getName(0)|   	|   	|   	|   	|   	|
+getNameCount|   	|   	|   	|   	|   	|
+subpath(0,2)|   	|   	|   	|   	|   	|
+getParent|   	|   	|   	|   	|   	|
+getRoot|   	|   	|   	|   	|   	|
+

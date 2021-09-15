@@ -41,7 +41,7 @@ public class Main {
 ```
 
 - ## Ejercicio 1
-Creamos un archivo File con el directorio pasado por parametro. Verificamos si existe contenido en la carpeta, y en caso contrario devolvemos null.
+Creamos un archivo File con el directorio pasado por parametro. Verificamos si existe contenido en la carpeta, y en caso contrario devolvemos _null_.
 Si existen ficheros, el metodo devuelve la lista en un *array[]* usando _.list()_.
 ```javascript
 	public String[] listarDirectorio(String directorio) {
@@ -53,8 +53,8 @@ Si existen ficheros, el metodo devuelve la lista en un *array[]* usando _.list()
 ```
 
 - ## Metodo _borrarCarpetas()_ 
-#### Este metodo se crea para poder ejecutar el ejercicio 2 y 3, sin tener conflicto entre ellos. 
-#### Lo que hace este metodo es borrar todo contenido del directorio _NUEVODIR_, en caso de que existiese.
+Este metodo se crea para poder ejecutar el ejercicio 2 y 3, sin tener conflicto entre ellos. 
+Lo que hace este metodo es borrar todo contenido del directorio _NUEVODIR_ y la misma carpeta, en caso de que existiese.
 ```javascript
 	public void borrarCarpetas() {
 
@@ -72,6 +72,11 @@ Si existen ficheros, el metodo devuelve la lista en un *array[]* usando _.list()
 	}
 ```
 - ## Ejercicio 2
+Para crear ficheros usando el paquete *IO*, usamos la clase _File_.
+Primero debemos crear el directorio. Esto lo hacemos creando un objeto File (_al que llamaremos directorio_), y crearemos dicha carpeta con el comando _.mkdir()_.
+Para crear el archivo 1 y 2 hacemos el mismo proceso, solo que colocando la nueva ruta(en nuestro caso la nueva carpeta creada), y creamos el archivo con _.createNewFile()_.
+Para renombrar un archivo, debemos crear un objeto File intermedio, al que pondremos el nuevo nombre. Luego al objeto que queremos cambiar usamos _.renameTo()_ y meter dentro el nuevo objeto _File_.
+Por ultimo, borramos el segundo con el comando _delete()_ y creamos el tercer archivo.
 ```javascript
 	public void crearFicherosIO() {
 		File directorio = new File("NUEVODIR");
@@ -98,6 +103,14 @@ Si existen ficheros, el metodo devuelve la lista en un *array[]* usando _.list()
 
 ```
 - ## Ejercicio 3
+Para poder hacer la misma tarea que el ejercicio anterior, pero usando el paquete NIO, cambia la cosa.
+Debes importar del paquete las clases Paths, Path y Files. De momento son las unicas que usaremos.
+Para crear una instancia del archivo, o en este caso, un Path debemos usar _Paths_ con el metodo _.get()_, con el nombre del archivo.
+Esto se aplica tanto a carpetas como a archivos.
+Para crear un directorio se usa el metodo _.createDirectory_ de la clase *Files* ,para los archivos, usaremos _.createFile_.
+Para renombrar un archivo usaremos, tambien de la clase *Files*, el metodo _.move()_, y como primer parametro pasaremos el archivo original y de segundo el nuevo archivo.
+Es necesario meter estas lineas en un _try catch_, ya que es necesario para controlar las posibles Excepciones.
+
 ```javascript
 	public void crearFicherosNIO() {
 		Path pathCarpeta = Paths.get("NUEVODIR");

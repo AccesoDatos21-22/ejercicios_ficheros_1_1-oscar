@@ -236,6 +236,7 @@ Este metodo devuelve la ruta real a traves de un URI
 ```
 Salida:
 >  URI _file:///F:/Programacion/Proyectos/Eclipse%20workspace/github-classroom/AccesoDatos21-22/ejercicios_ficheros_1_1-oscar/entrada.txt_
+<hr/>
 ### Segundo metodo  *.toAbsolutePath()*
 Este metodo devuelve la ruta absoluta del archivo
 ```javascript

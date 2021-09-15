@@ -28,7 +28,7 @@ public class Main {
 			
 
 			System.out.println("\n------------ Ejercicio 6 ------------\n");
-			 Ejercicios.pruebasRutas01("./NUEVODIR/NUEVA_CARPETA"); 
+			 Ejercicios.pruebasRutas01("Usuarios\\Pepe"); 
 			
 		}
 }

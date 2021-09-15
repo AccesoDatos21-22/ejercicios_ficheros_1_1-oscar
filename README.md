@@ -12,15 +12,16 @@ public class Main {
 			
 			
 			System.out.println("------------ Ejercicio 1 ------------\n");
-			String[]lista = ejercicios.listarDirectorio(args[0);
+			String[]lista = ejercicios.listarDirectorio(args[0]);
 			if(lista==null) System.out.println("El directorio esta vacio");
 			else for(int i=0;i<lista.length;i++) System.out.println(lista[i]);
 			
 			
+			ejercicios.borrarCarpetas();
 			System.out.println("\n------------ Ejercicio 2 ------------\n");
 			ejercicios.crearFicherosIO();
 			
-		
+			ejercicios.borrarCarpetas();
 			System.out.println("\n------------ Ejercicio 3 ------------\n");
 			ejercicios.crearFicherosNIO();
 		
@@ -30,6 +31,10 @@ public class Main {
 		
 			System.out.println("\n------------ Ejercicio 5 ------------\n");
 			ejercicios.infoFicheroNIO("C:\\Users\\triss\\Downloads\\a.png");
+			
+
+			System.out.println("\n------------ Ejercicio 6 ------------\n");
+			 Ejercicios.pruebasRutas01("Usuarios\\Pepe"); 
 		}
 }
 ```
@@ -54,11 +59,9 @@ public class Main {
 
 		try(DirectoryStream<Path> stream = Files.newDirectoryStream(file)){
 			
-			for(Path a: stream) {
-				Files.delete(a);
-				
-			}
+			for(Path a: stream) Files.delete(a);
 			Files.deleteIfExists(file);
+
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -129,7 +132,7 @@ public class Main {
 	}
 
 ```
-## Ejercicio 5
+## - Ejercicio 5
 ```javascript
 	public void infoFicheroNIO(String fichero) {
 		Path path = Paths.get(fichero);

@@ -3,7 +3,6 @@ package org.madrid.ad.ut01.ficheros;
 import java.io.IOException;
 
 import java.io.File;
-import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;

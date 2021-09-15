@@ -142,7 +142,7 @@ Es necesario meter estas lineas en un _try catch_, ya que es necesario para cont
 
 ```
 - ## Ejercicio 4
-En este ejercicio mostraremos la informacion sobre un archivo o directorio.
+En este ejercicio mostraremos la informacion sobre un archivo o directorio usando el paquete IO.
 Para ello usaremos un objeto _File_ con el path del mismo.
 
 Mostraremos atributos como:
@@ -167,6 +167,13 @@ Mostraremos atributos como:
 
 ```
 - ## Ejercicio 5
+En este ejercicio mostraremos la informacion sobre un archivo o directorio, pero esta vez, con el paquete NIO.
+Debemos usar Path para crear una instancia del archivo, y pasaremos atributos como:
+- *.getFileName()*  - Devuelve el nombre del archivo
+- *.getParent()* - Devuelve la carpeta Padre
+- *.toString()* - Devuelve la ruta 
+- *.getRoot()* - Devuelve el Root del archivo
+- *.getNameCount()* - Devuelve el numero de carpetas de la ruta
 ```javascript
 	public void infoFicheroNIO(String fichero) {
 		Path path = Paths.get(fichero);
@@ -180,6 +187,8 @@ Mostraremos atributos como:
 ```
 
 - ## Ejercicio 6
+Al ejecutar el codigo dado en el ejercicio 6, nos salen una serie de valores. Estos son rellenados en la siguiente tabla.
+
 |  Método invocado 	|   Valor devuelto en GNU/Linux	|   Valor devuelto en Windows	|   Descripción del método	|
 | ---	| ---	| ---	| ---	| 
 |   _toString_ 	|   	|   C:\Usuarios\pepe\fotos	|   Te muestra la ruta del archivo/carpeta en un string	|

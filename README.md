@@ -143,14 +143,14 @@ public class Ejercicios implements InterfazEjercicios {
 
 ```
 
-##Ejercicio 6
+## Ejercicio 6
 |  Método invocado 	|   Valor devuelto en GNU/Linux	|   Valor devuelto en Windows	|   Descripción del método	|
-		|---	|---	|---	|---	|---	|
-toString|   	|   	|   	|   	|   	|
-getFileName|   	|   	|   	|   	|   	|
-getName(0)|   	|   	|   	|   	|   	|
-getNameCount|   	|   	|   	|   	|   	|
-subpath(0,2)|   	|   	|   	|   	|   	|
-getParent|   	|   	|   	|   	|   	|
-getRoot|   	|   	|   	|   	|   	|
+|---	|---	|---	|---	|---	|
+|   toString	|   	|   	|   	|
+|   getFileName	|   	|   	|   	|
+|   getName(0)	|   	|   	|   	|
+|   getNameCount	|   	|   	|   	|
+|   subpath(0,2)	|   	|   	|   	|
+|   getParent	|   	|   	|   	|
+|   getRoot	|   	|   	|   	|
 

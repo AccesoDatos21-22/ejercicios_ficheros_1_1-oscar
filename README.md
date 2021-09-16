@@ -75,7 +75,7 @@ Este metodo se crea para poder ejecutar el ejercicio 2 y 3, sin tener conflicto 
 Lo que hace este metodo es borrar todo contenido del directorio _NUEVODIR_ y la misma carpeta, en caso de que existiese.  
 ```javascript
 	public void borrarCarpetas() {
-
+		
 		Path file = Paths.get("NUEVODIR");
 
 		try(DirectoryStream<Path> stream = Files.newDirectoryStream(file)){
@@ -100,6 +100,7 @@ Para renombrar un archivo, debemos crear un objeto File intermedio, al que pondr
 Por ultimo, borramos el segundo con el comando _.delete()_ y creamos el tercer archivo.  
 ```javascript
 	public void crearFicherosIO() {
+		borrarCarpetas();
 		File directorio = new File("NUEVODIR");
 		directorio.mkdir();
 		try {
@@ -143,6 +144,7 @@ Es necesario meter estas lineas en un _try catch_, ya que es necesario para cont
 
 ```javascript
 	public void crearFicherosNIO() {
+		borrarCarpetas();
 		Path pathCarpeta = Paths.get("NUEVODIR");
 		Path pathArchivo1 = Paths.get("FICHERO1.TXT");
 		Path pathArchivo1_1 = Paths.get("NUEVODIR/FICHERO1NUEVO.TXT");

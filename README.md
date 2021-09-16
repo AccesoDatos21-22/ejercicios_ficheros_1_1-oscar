@@ -245,7 +245,7 @@ En el segundo caso, primero entramos a la carpeta "_/juan/_", despues salimos "_
 
 Esto es lo que hace el metodo _.normalize()_. Es muy util para arreglar Paths redundantes.
 ```javascript
-	static void pruebasRutas02(String fichero) {
+	static void pruebasRutas02() {
 		Path path1 = Paths.get("/home/./pepe/fotos");
 		Path path2= Paths.get("/home/juan/../pepe/fotos");
 		System.out.println("a."+ path1.toString()+" pasa a->" +path1.normalize().toString());

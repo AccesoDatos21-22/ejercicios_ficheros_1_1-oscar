@@ -67,6 +67,8 @@ Si existen ficheros, el metodo devuelve la lista en un *array[]* usando _.list()
 
 	}
 ```
+### Pruebas
+Este ejercicio esta testeado. En caso de no tener ningun contenido dentro del directorio, el programa devolvería null, y en consola te avisaria.
 
 - ## Metodo _borrarCarpetas()_ 
 Este metodo se crea para poder ejecutar el ejercicio 2 y 3, sin tener conflicto entre ellos.  
@@ -121,6 +123,11 @@ Por ultimo, borramos el segundo con el comando _.delete()_ y creamos el tercer a
 	}
 
 ```
+### Pruebas
+Este ejercicio puede fallar si la carpeta que creamos y sus archivos existen ya. Por ello, se ejecuta el metodo borrarCarpetas(), para poder ejecutarlo sin problemas.
+En caso contrario, crearía ficheros extra y en casos extremos, saltar una excepción.
+
+
 - ## Ejercicio 3
 Para poder hacer la misma tarea que el ejercicio anterior, pero usando el paquete NIO, cambia la cosa.  
 Debes importar del paquete las clases Paths, Path y Files. De momento son las unicas que usaremos.
@@ -157,6 +164,11 @@ Es necesario meter estas lineas en un _try catch_, ya que es necesario para cont
 	}
 
 ```
+### Pruebas
+El paquete NIO tiene mas excepciones que handlear, por lo que hay que hacer mas pruebas.
+El problema de archivos ya existentes lo solucionamos igual que el ejercicio anterior (con el metodo borrarCarpetas).
+
+
 - ## Ejercicio 4
 En este ejercicio mostraremos la informacion sobre un archivo o directorio usando el paquete IO.
 Para ello usaremos un objeto _File_ con el path del mismo.

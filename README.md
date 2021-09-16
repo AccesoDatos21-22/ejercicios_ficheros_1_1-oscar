@@ -184,9 +184,9 @@ Como veremos a continuacion, se crea un metodo para comprobar resultados
 	}
 ```
 Resultado
-> El archivo existe> NUEVODIR 
-> Fichero3 existe
-> Fichero1NUEVO existe
+> El archivo existe> NUEVODIR  
+> Fichero3 existe  
+> Fichero1NUEVO existe  
 
 
 - ## Ejercicio 4

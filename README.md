@@ -239,13 +239,13 @@ Al ejecutar el codigo dado en el ejercicio 6, nos salen una serie de valores. Es
 
 |  Método invocado 	|   Valor devuelto en GNU/Linux	|   Valor devuelto en Windows	|   Descripción del método	|
 | ---	| ---	| ---	| ---	| 
-|   _toString_ 	|   	|   C:\Usuarios\pepe\fotos	|   Te muestra la ruta del archivo/carpeta en un string	|
-|   _getFileName_	|   	|   fotos	|   Te muestra el nombre del archivo seleccionado	|
-|   _getName(0)_	|   	|   Usuarios	|   Devuelve el nombre del primer elemento de la ruta	|
-|   _getNameCount_ |	|  3 	|  DEvuelve el numero de elementos por los que pasa hasta llegar a la ruta 	|   	
-|   _subpath(0,2)_ |	|   Usuarios\pepe	|   crea una sub Path 	|   
-|   _getParent_ |   	|   C:\Usuarios\pepe	|   devuelve la carpeta padre del archivo	|
-|   _getRoot_ |   	|   C:\	|   devuelve el Root del archivo o Null	|
+|   _toString_ 	|   /home/pepe/fotos	|   C:\Usuarios\pepe\fotos	|   Te muestra la ruta del archivo/carpeta en un string	|
+|   _getFileName_	|   fotos	|   fotos	|   Te muestra el nombre del archivo seleccionado	|
+|   _getName(0)_	|   home	|   Usuarios	|   Devuelve el nombre del primer elemento de la ruta	|
+|   _getNameCount_ | 3	|  3 	|  DEvuelve el numero de elementos por los que pasa hasta llegar a la ruta 	|   	
+|   _subpath(0,2)_ | /home/pepe	|   Usuarios\pepe	|   crea una sub Path 	|   
+|   _getParent_ |  /home/pepe 	|   C:\Usuarios\pepe	|   devuelve la carpeta padre del archivo	|
+|   _getRoot_ |  / 	|   C:\	|   devuelve el Root del archivo o Null	|
 ### Ejercicio 6b
 En el caso de tener un Usuario llamado Pepe y la ruta existiese, el output seria distinto, no detectaría el Root del archivo, ni la ruta absoluta,  ya que al pasarle solo la ruta relativa, no sabe donde se ubica dicho archivo.
 Este es el resultado:

@@ -28,6 +28,7 @@ public class Ejercicios implements InterfazEjercicios {
 
 	@Override
 	public void crearFicherosIO() {
+		borrarCarpetas();
 		File directorio = new File("NUEVODIR");
 		directorio.mkdir();
 		try {
@@ -52,6 +53,7 @@ public class Ejercicios implements InterfazEjercicios {
 
 	@Override
 	public void crearFicherosNIO() {
+		borrarCarpetas();
 		Path pathCarpeta = Paths.get("NUEVODIR");
 		Path pathArchivo1 = Paths.get("FICHERO1.TXT");
 		Path pathArchivo1_1 = Paths.get("NUEVODIR/FICHERO1NUEVO.TXT");

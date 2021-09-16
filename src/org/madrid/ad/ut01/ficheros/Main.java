@@ -11,11 +11,9 @@ public class Main {
 			else for(int i=0;i<lista.length;i++) System.out.println(lista[i]);
 			
 			
-			ejercicios.borrarCarpetas();
 			System.out.println("\n------------ Ejercicio 2 ------------\n");
 			ejercicios.crearFicherosIO();
 			
-			ejercicios.borrarCarpetas();
 			System.out.println("\n------------ Ejercicio 3 ------------\n");
 			ejercicios.crearFicherosNIO();
 		

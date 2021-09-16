@@ -4,7 +4,6 @@ public class Main {
 		public static void main(String[]args) {
 			Ejercicios ejercicios = new Ejercicios();
 			
-			
 			System.out.println("------------ Ejercicio 1 ------------\n");
 			String[]lista = ejercicios.listarDirectorio(args[0]);
 			if(lista==null) System.out.println("El directorio esta vacio");
@@ -39,6 +38,9 @@ public class Main {
 			
 			System.out.println("\n------------ Ejercicio 10 ------------\n");
 			InterfazEjercicios.pruebasRutas05("Usuarios\\juan\\fotos","C:\\Usuarios\\juan\\fotos","Usuarios","fotos"); 
+			
+			
+			tests.probarCarpetasBorradas();
 			
 		}
 }

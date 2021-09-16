@@ -7,7 +7,6 @@ Ademas, tenemos al principio un Main para poder probar dichos ejercicios.
 
 ## Main.java
 En la clase <b>*Main*</b> se ejecutaran todos los ejercicios, usando sus respectivos métodos.<br />
-El metodo _*borrarCarpetas()*_ se repite antes de ejecutar ejercicios 2 y 3.  
 
 
 

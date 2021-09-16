@@ -183,6 +183,10 @@ Como veremos a continuacion, se crea un metodo para comprobar resultados
 		else System.out.println("Ningun archivo existe");
 	}
 ```
+Resultado
+> El archivo existe> NUEVODIR 
+> Fichero3 existe
+> Fichero1NUEVO existe
 
 
 - ## Ejercicio 4

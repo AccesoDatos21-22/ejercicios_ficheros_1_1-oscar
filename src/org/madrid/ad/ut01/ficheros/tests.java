@@ -14,7 +14,6 @@ public class tests {
 		if(Files.exists(dir.resolve("FICHERO2.TXT"))) System.out.println("Fichero2 existe");
 		if(Files.exists(dir.resolve("FICHERO3.TXT"))) System.out.println("Fichero3 existe");
 		if(Files.exists(dir.resolve("FICHERO1NUEVO.TXT"))) System.out.println("Fichero1NUEVO existe");
-		
 		else System.out.println("Ningun archivo existe");
 	}
 }

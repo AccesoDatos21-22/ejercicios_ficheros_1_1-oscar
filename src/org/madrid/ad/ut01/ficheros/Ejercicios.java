@@ -55,11 +55,10 @@ public class Ejercicios implements InterfazEjercicios {
 	public void crearFicherosNIO() {
 		borrarCarpetas();
 		Path pathCarpeta = Paths.get("NUEVODIR");
-		Path pathArchivo1 = Paths.get("FICHERO1.TXT");
-		Path pathArchivo1_1 = Paths.get("NUEVODIR/FICHERO1NUEVO.TXT");
-		Path pathArchivo2 = Paths.get("NUEVODIR/FICHERO2.TXT");
-
-		Path pathArchivo3 = Paths.get("NUEVODIR/FICHERO3.TXT");
+		Path pathArchivo1 = pathCarpeta.resolve("FICHERO1.TXT");
+		Path pathArchivo1_1 = pathCarpeta.resolve("FICHERO1NUEVO.TXT");
+		Path pathArchivo2 = pathCarpeta.resolve("FICHERO2.TXT");
+		Path pathArchivo3 = pathCarpeta.resolve("FICHERO3.TXT");
 		try {
 			Files.createDirectory(pathCarpeta);
 			Files.createFile(pathArchivo1);
